@@ -18,9 +18,9 @@ const Header = ({ setRefresh }) => {
       setTitle("");
       setRefresh(true);
 
-      setTimeout(() => {
-        alert(`new ${title} todo added.`);
-      }, 500);
+      // setTimeout(() => {
+      //   alert(`new ${title} todo added.`);
+      // }, 500);
     });
   };
 
