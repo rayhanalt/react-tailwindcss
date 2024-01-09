@@ -10,8 +10,8 @@ function App() {
   };
 
   return (
-    <div className="App min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="content p-4 max-w-md w-full bg-white rounded shadow-md">
+    <div className="App min-h-screen bg-gray-200 flex items-center justify-center">
+      <div className="content p-4 max-w-md w-full bg-white  rounded-2xl shadow-md">
         <Header setRefresh={setRefresh} />
         <TodoList setRefresh={setRefresh} isRefresh={isRefresh} />
       </div>

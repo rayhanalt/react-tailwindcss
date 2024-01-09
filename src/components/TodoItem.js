@@ -24,12 +24,17 @@ const TodoItem = ({ todo, setRefresh }) => {
   };
 
   return (
-    <li className={`flex items-center `}>
-      <div className={`cursor-pointer flex-1 ${todo.done ? "line-through text-gray-500" : ""}`} onClick={updateTodo}>
-        {todo.title}
+    <li className={`flex items-center mb-2`}>
+      <div className="cursor-pointer flex-1" onClick={updateTodo}>
+        <span className={` ${todo.done ? "line-through text-gray-500" : ""}`}>{todo.title}</span>
+        {todo.done && <span className="ml-2">✔</span>}
       </div>
-      <span className="cursor-pointer text-red-500 hover:text-red-700" onClick={deleteTodo}>
-        x
+      <span
+        className="cursor-pointer bg-white rounded-md p-2 inline-flex items-center justify-center text-red-400 hover:text-red-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+        onClick={deleteTodo}>
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
       </span>
     </li>
   );

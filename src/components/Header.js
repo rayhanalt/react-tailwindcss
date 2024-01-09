@@ -25,12 +25,14 @@ const Header = ({ setRefresh }) => {
   };
 
   return (
-    <div className="p-4 bg-gray-800 text-white flex items-center justify-between">
-      <h2 className="text-2xl font-semibold">Simple Todo App</h2>
-      <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="p-2 mr-2 text-black border rounded border-gray-300 focus:outline-none focus:border-blue-500" placeholder="Add Todo..." />
-      <span className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600" onClick={addTodo}>
-        Add
-      </span>
+    <div className="p-4 bg-gray-800 text-white flex flex-col items-center justify-between rounded-xl">
+      <h2 className="text-4xl font-semibold mb-2">Simple Todo App</h2>
+      <div>
+        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className=" p-2 mr-2 text-black border rounded-lg border-gray-300 focus:outline-none focus:border-blue-500" placeholder="Add Todo..." />
+        <span className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600" onClick={addTodo}>
+          Add
+        </span>
+      </div>
     </div>
   );
 };
